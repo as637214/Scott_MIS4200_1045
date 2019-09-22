@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Scott_MIS4200_1045.Models.coordinationType>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.footballPlayer.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoordinationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.coachID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.footballPlayer.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CoordinationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.coachID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.coordinationTypeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.coordinationTypeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.coordinationTypeID })
+        </td>
+    </tr>
+}
+
+</table>

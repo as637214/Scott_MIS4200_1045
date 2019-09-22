@@ -1,0 +1,50 @@
+﻿@model Scott_MIS4200_1045.Models.coordinationType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>coordinationType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.footballPlayer.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.footballPlayer.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoordinationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoordinationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.coachID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coachID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.coordinationTypeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

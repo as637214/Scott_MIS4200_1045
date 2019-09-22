@@ -1,0 +1,50 @@
+﻿@model Scott_MIS4200_1045.Models.footballPlayer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>footballPlayer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.footballPlayerSince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.footballPlayerSince)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.footballPlayerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
